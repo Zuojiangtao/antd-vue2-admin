@@ -31,8 +31,8 @@ const assetsCDN = {
   // https://unpkg.com/browse/vue@2.6.10/
   js: [
     '//cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js',
-    '//cdn.jsdelivr.net/npm/vue-router@4.0.13/dist/vue-router.min.js',
-    '//cdn.jsdelivr.net/npm/vuex@4.0.2/dist/vuex.min.js',
+    '//cdn.jsdelivr.net/npm/vue-router@3.5.3/dist/vue-router.min.js',
+    '//cdn.jsdelivr.net/npm/vuex@3.6.2/dist/vuex.min.js',
     '//cdn.jsdelivr.net/npm/axios@0.26.0/dist/axios.min.js',
   ],
 }
