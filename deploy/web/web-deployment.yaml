@@ -1,0 +1,71 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: $APP_NAME
+    component: $COMPONENT
+    tier: $TIER
+  name: $APP_NAME
+  namespace: $K8S_NAMESPACES
+spec:
+  replicas: $REPLICAS
+  selector:
+    matchLabels:
+      app: $APP_NAME
+      component: $COMPONENT
+      tier: $TIER
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 25%
+      maxSurge: 25%
+  revisionHistoryLimit: 10
+  progressDeadlineSeconds: 600
+  template:
+    metadata:
+      labels:
+        app: $APP_NAME
+        component: $COMPONENT
+        tier: $TIER
+    spec:
+      imagePullSecrets:
+        - name: $IMAGE_PULL_SECRET
+      containers:
+        - image: $REGISTRY/$DOCKERHUB_NAMESPACE/$APP_NAME:SNAPSHOT-$BRANCH_NAME-$BUILD_NUMBER
+          imagePullPolicy: Always
+          name: $APP_NAME
+          ports:
+            - containerPort: 80
+              protocol: TCP
+          resources:
+            limits:
+              cpu: 2
+              memory: 2000Mi
+            requests:
+              cpu: 1
+              memory: 1000Mi
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 80
+              scheme: HTTP
+            timeoutSeconds: 1
+            periodSeconds: 10
+            successThreshold: 1
+            failureThreshold: 3
+      affinity:
+        podAntiAffinity:
+          preferredDuringSchedulingIgnoredDuringExecution:
+            - weight: 100
+              podAffinityTerm:
+                labelSelector:
+                  matchLabels:
+                    app: $APP_NAME
+                topologyKey: kubernetes.io/hostname
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      terminationGracePeriodSeconds: 30
+      serviceAccountName: default
+      serviceAccount: default
+      securityContext: {}
+      schedulerName: default-scheduler
