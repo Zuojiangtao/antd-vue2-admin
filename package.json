@@ -10,7 +10,7 @@
     "pretty-quick": "pretty-quick"
   },
   "dependencies": {
-    "@ant-design-vue/pro-layout": "^3.1.13",
+    "@ant-design-vue/pro-layout": "^1.0.11",
     "ant-design-vue": "^1.7.8",
     "axios": "^0.26.0",
     "core-js": "^3.8.3",
@@ -31,7 +31,7 @@
     "@vue/cli-plugin-babel": "~5.0.0",
     "@vue/cli-plugin-eslint": "~5.0.0",
     "@vue/cli-service": "~5.0.0",
-    "@vue/eslint-config-standard": "^6.1.0",
+    "@vue/eslint-config-standard": "4.0.0",
     "babel-eslint": "^10.1.0",
     "babel-plugin-import": "^1.13.3",
     "babel-plugin-transform-remove-console": "^6.9.4",
