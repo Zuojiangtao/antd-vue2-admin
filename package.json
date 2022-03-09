@@ -2,6 +2,18 @@
   "name": "antd-vue2-admin",
   "version": "0.1.0",
   "private": true,
+  "author": {
+    "name": "Zuojiangtao",
+    "email": "1799158837@qq.com",
+    "url": "https://github.com/Zuojiangtao"
+  },
+  "keywords": [
+    "vue",
+    "ant-design-vue",
+    "vue2",
+    "admin"
+  ],
+  "license": "MIT",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
