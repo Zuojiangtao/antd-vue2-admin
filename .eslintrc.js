@@ -38,5 +38,7 @@ module.exports = {
     'vue/no-use-v-if-with-v-for': 0,
     'vue/html-closing-bracket-newline': 0,
     'vue/no-parsing-error': 0,
+    'vue/multi-word-component-names': 0,
+    'vue/no-mutating-props': 0,
   },
 }

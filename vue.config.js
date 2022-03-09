@@ -1,4 +1,3 @@
-const { defineConfig } = require('@vue/cli-service')
 const path = require('path')
 const webpack = require('webpack')
 const { GitRevisionPlugin } = require('git-revision-webpack-plugin')
@@ -38,7 +37,6 @@ const assetsCDN = {
 }
 
 const vueConfig = {
-  publicPath: '/',
   configureWebpack: {
     // webpack plugins
     plugins: [
@@ -122,4 +120,4 @@ const vueConfig = {
   transpileDependencies: [],
 }
 
-module.exports = defineConfig(vueConfig)
+module.exports = vueConfig

@@ -196,7 +196,7 @@
     ],
     "padded-blocks": 0, // 块语句内行首行尾是否要空行
     "prefer-const": [
-      0,
+      2,
       {
         "ignoreReadBeforeAssign": false
       }
