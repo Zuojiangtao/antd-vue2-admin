@@ -5,6 +5,7 @@
     :mediaQuery="query"
     :isMobile="isMobile"
     :siderWidth="230"
+    :collapsedWidth="64"
     :contentWidth="defaultSettings.contentWidth"
     :handleMediaQuery="handleMediaQuery"
     :handleCollapse="handleCollapse"
