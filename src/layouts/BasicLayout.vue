@@ -4,6 +4,7 @@
     :collapsed="collapsed"
     :mediaQuery="query"
     :isMobile="isMobile"
+    :siderWidth="230"
     :contentWidth="defaultSettings.contentWidth"
     :handleMediaQuery="handleMediaQuery"
     :handleCollapse="handleCollapse"
@@ -29,6 +30,7 @@
     <!-- 页面头-->
     <template #rightContentRender>
       <right-content :top-menu="settings.layout === 'topmenu'" :is-mobile="isMobile" :theme="settings.theme" />
+      <multi-tab v-if="multiTab"></multi-tab>
     </template>
     <!-- 页面脚-->
     <template #footerRender>
@@ -47,6 +49,7 @@ import { mapGetters, mapState } from 'vuex'
 import RightContent from '@/components/GlobalHeader/RightContent'
 import GlobalFooter from '@/components/GlobalFooter'
 import Breadcrumb from '@/components/Breadcrumb/Breadcrumb'
+import MultiTab from '@/components/MultiTab/index'
 import LogoSvg from '@/assets/logo.svg?inline'
 
 import defaultSettings from '@/config/defaultSettings'
@@ -59,6 +62,7 @@ export default {
     RightContent,
     GlobalFooter,
     Breadcrumb,
+    MultiTab,
     LogoSvg,
   },
   data() {

@@ -21,13 +21,13 @@ import {
   Icon,
   // Badge,
   // Popover,
-  // Dropdown,
+  Dropdown,
   // List,
   // Avatar,
   Breadcrumb,
   // Steps,
   // Spin,
-  // Menu,
+  Menu,
   // Drawer,
   // Tooltip,
   // Tree,
@@ -73,13 +73,13 @@ Vue.use(Tabs)
 Vue.use(Icon)
 // Vue.use(Badge)
 // Vue.use(Popover)
-// Vue.use(Dropdown)
+Vue.use(Dropdown)
 // Vue.use(List)
 // Vue.use(Avatar)
 Vue.use(Breadcrumb)
 // Vue.use(Steps)
 // Vue.use(Spin)
-// Vue.use(Menu)
+Vue.use(Menu)
 // Vue.use(Drawer)
 // Vue.use(Tooltip)
 // Vue.use(Tree)

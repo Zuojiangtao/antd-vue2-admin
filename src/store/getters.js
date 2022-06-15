@@ -27,6 +27,11 @@ const getters = {
   userInfo: state => state.user.userInfo,
   userAvatar: state => state.user.userInfo.icon,
   userName: state => state.user.name,
+  // multiTab
+  keepAlive: state => state.multiTabs.keepAlive,
+  activeTabList: state => state.multiTabs.activeTabList,
+  activeFullPath: state => state.multiTabs.activeFullPath,
+  currentTabActiveKey: state => state.multiTabs.currentTabActiveKey,
   // permission
   routers: state => state.permission.routers,
   addRouters: state => state.permission.addRouters,

@@ -6,6 +6,7 @@ import app from './modules/app'
 // import dictionary from './modules/dictionary'
 // import permission from './modules/permission'
 // import user from './modules/user'
+import multiTabs from './modules/multi-tabs'
 
 import getters from './getters'
 
@@ -18,6 +19,7 @@ export default new Vuex.Store({
     // dictionary,
     // permission,
     // user,
+    multiTabs,
   },
   getters,
 })
