@@ -19,9 +19,11 @@
     </a-layout-content>
     <!-- 菜单logo -->
     <template #menuHeaderRender>
-      <div>
-        <logo-svg />
-        <h1>{{ title }}</h1>
+      <div class="ant-menu-item" style="margin-left: -18px; display: flex; align-items: center; height: 100%">
+        <img src="~@/assets/logo.png" style="width: 30px; height: 30px; position: relative" alt="/" />
+        <div v-if="!collapsed" style="margin-left: 40px; font-size: 16px; color: #ffffff">
+          {{ title }}
+        </div>
       </div>
     </template>
     <!-- 面包屑导航-->
@@ -51,7 +53,7 @@ import RightContent from '@/components/GlobalHeader/RightContent'
 import GlobalFooter from '@/components/GlobalFooter'
 import Breadcrumb from '@/components/Breadcrumb/Breadcrumb'
 import MultiTab from '@/components/MultiTab/index'
-import LogoSvg from '@/assets/logo.svg?inline'
+// import LogoSvg from '@/assets/logo.svg?inline'
 
 import defaultSettings from '@/config/defaultSettings'
 import { asyncRouterMap } from '@/config/router.config.js'
@@ -64,7 +66,7 @@ export default {
     GlobalFooter,
     Breadcrumb,
     MultiTab,
-    LogoSvg,
+    // LogoSvg,
   },
   data() {
     return {
