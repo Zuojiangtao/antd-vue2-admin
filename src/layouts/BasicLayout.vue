@@ -4,9 +4,10 @@
     :collapsed="collapsed"
     :mediaQuery="query"
     :isMobile="isMobile"
-    :siderWidth="230"
+    :siderWidth="200"
     :collapsedWidth="64"
     :contentWidth="defaultSettings.contentWidth"
+    :footerRender="false"
     :handleMediaQuery="handleMediaQuery"
     :handleCollapse="handleCollapse"
     v-bind="settings"
@@ -36,9 +37,9 @@
       <multi-tab v-if="multiTab"></multi-tab>
     </template>
     <!-- 页面脚-->
-    <template #footerRender>
-      <global-footer style="display: none" />
-    </template>
+    <!--    <template #footerRender>-->
+    <!--      <global-footer style="display: none" />-->
+    <!--    </template>-->
     <keep-alive :include="keepAliveViews">
       <router-view :key="$route.fullPath" />
     </keep-alive>
