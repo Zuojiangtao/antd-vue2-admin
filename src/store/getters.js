@@ -25,7 +25,7 @@ const getters = {
   userId: state => state.user.userId,
   tenantId: state => state.user.tenantId,
   userInfo: state => state.user.userInfo,
-  userAvatar: state => state.user.userInfo.icon,
+  userAvatar: state => state.user.avatar,
   userName: state => state.user.name,
   // multiTab
   keepAlive: state => state.multiTabs.keepAlive,

@@ -5,7 +5,7 @@ import app from './modules/app'
 // import classify from './modules/classify'
 // import dictionary from './modules/dictionary'
 // import permission from './modules/permission'
-// import user from './modules/user'
+import user from './modules/user'
 import multiTabs from './modules/multi-tabs'
 
 import getters from './getters'
@@ -18,7 +18,7 @@ export default new Vuex.Store({
     // classify,
     // dictionary,
     // permission,
-    // user,
+    user,
     multiTabs,
   },
   getters,

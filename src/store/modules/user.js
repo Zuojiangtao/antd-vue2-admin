@@ -6,7 +6,7 @@ const user = {
   state: {
     token: '',
     name: 'userName',
-    avatar: '',
+    avatar: 'https://gw.alipayobjects.com/zos/antfincdn/XAosXuNZyF/BiazfanxmamNRoxxVxka.png',
     roles: [],
     info: {},
   },

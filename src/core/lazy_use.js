@@ -19,11 +19,11 @@ import {
   Table,
   Tabs,
   Icon,
-  // Badge,
+  Badge,
   // Popover,
   Dropdown,
   // List,
-  // Avatar,
+  Avatar,
   Breadcrumb,
   // Steps,
   // Spin,
@@ -42,7 +42,7 @@ import {
   // Popconfirm,
   Pagination,
   PageHeader,
-  // Result,
+  Result,
   // Statistic,
   // Descriptions,
   // Cascader,
@@ -71,11 +71,11 @@ Vue.use(Modal)
 Vue.use(Table)
 Vue.use(Tabs)
 Vue.use(Icon)
-// Vue.use(Badge)
+Vue.use(Badge)
 // Vue.use(Popover)
 Vue.use(Dropdown)
 // Vue.use(List)
-// Vue.use(Avatar)
+Vue.use(Avatar)
 Vue.use(Breadcrumb)
 // Vue.use(Steps)
 // Vue.use(Spin)
@@ -94,7 +94,7 @@ Vue.use(Divider)
 // Vue.use(Popconfirm)
 Vue.use(Pagination)
 Vue.use(PageHeader)
-// Vue.use(Result)
+Vue.use(Result)
 // Vue.use(Statistic)
 // Vue.use(Descriptions)
 // Vue.use(Cascader)
