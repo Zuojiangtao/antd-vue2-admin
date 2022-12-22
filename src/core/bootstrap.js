@@ -24,6 +24,6 @@ export default function Initializer() {
   store.commit(TOGGLE_WEAK, storage.get(TOGGLE_WEAK, defaultSettings.colorWeak))
   store.commit(TOGGLE_COLOR, storage.get(TOGGLE_COLOR, defaultSettings.primaryColor))
   store.commit(TOGGLE_MULTI_TAB, storage.get(TOGGLE_MULTI_TAB, defaultSettings.multiTab))
-  store.dispatch('setLang', storage.get(APP_LANGUAGE, 'zh-CN')) // 初始化为中文包
+  store.dispatch('setLang', storage.get(APP_LANGUAGE, 'zh_CN')) // 初始化为中文包
   // last step
 }

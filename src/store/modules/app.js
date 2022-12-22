@@ -32,7 +32,7 @@ const app = {
     color: '',
     weak: false,
     multiTab: true,
-    lang: 'zh-CN',
+    lang: 'zh_CN',
     _antLocale: {},
 
     keepAliveViews: [],
