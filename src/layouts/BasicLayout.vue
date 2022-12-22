@@ -41,7 +41,7 @@
     <!--      <global-footer style="display: none" />-->
     <!--    </template>-->
     <keep-alive :include="keepAliveViews">
-      <router-view :key="$route.fullPath" />
+      <router-view :key="$route.fullPath" :style="{ paddingTop: multiTab ? '40px' : '0' }" />
     </keep-alive>
   </pro-layout>
 </template>
