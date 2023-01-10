@@ -90,7 +90,7 @@ export default {
       // 动态主路由
       mainMenu: state => state.permission.addRouters,
     }),
-    ...mapGetters(['keepAliveViews']),
+    ...mapGetters(['keepAlive']),
     settings() {
       return {
         // 布局类型
