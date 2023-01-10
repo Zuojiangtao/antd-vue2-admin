@@ -5,7 +5,7 @@
     :mediaQuery="query"
     :isMobile="isMobile"
     :siderWidth="200"
-    :collapsedWidth="64"
+    :collapsedWidth="60"
     :contentWidth="defaultSettings.contentWidth"
     :footerRender="false"
     :handleMediaQuery="handleMediaQuery"
@@ -13,18 +13,16 @@
     v-bind="settings"
   >
     <!-- 设置-->
-    <setting-drawer :settings="settings" @change="handleSettingChange" />
+    <!-- <setting-drawer :settings="settings" @change="handleSettingChange" /> -->
     <!-- layout content -->
     <a-layout-content :style="{ height: '100%' }">
       <transition name="page-transition"></transition>
     </a-layout-content>
     <!-- 菜单logo -->
     <template #menuHeaderRender>
-      <div class="ant-menu-item" style="margin-left: -18px; display: flex; align-items: center; height: 100%">
-        <img src="~@/assets/logo.png" style="width: 30px; height: 30px; position: relative" alt="/" />
-        <div v-if="!collapsed" style="margin-left: 40px; font-size: 16px; color: #ffffff">
-          {{ title }}
-        </div>
+      <div>
+        <img src="@/assets/logo.svg" />
+        <h1>{{ title }}</h1>
       </div>
     </template>
     <!-- 面包屑导航-->
@@ -40,21 +38,20 @@
     <!--    <template #footerRender>-->
     <!--      <global-footer style="display: none" />-->
     <!--    </template>-->
-    <keep-alive :include="keepAliveViews">
+    <keep-alive :include="keepAlive">
       <router-view :key="$route.fullPath" :style="{ paddingTop: multiTab ? '40px' : '0' }" />
     </keep-alive>
   </pro-layout>
 </template>
 
 <script>
-import { SettingDrawer } from '@ant-design-vue/pro-layout'
+// import { SettingDrawer } from '@ant-design-vue/pro-layout'
 import { mapGetters, mapState } from 'vuex'
 
 import RightContent from '@/components/GlobalHeader/RightContent'
-import GlobalFooter from '@/components/GlobalFooter'
+// import GlobalFooter from '@/components/GlobalFooter'
 import Breadcrumb from '@/components/Breadcrumb/Breadcrumb'
 import MultiTab from '@/components/MultiTab/index'
-// import LogoSvg from '@/assets/logo.svg?inline'
 
 import defaultSettings from '@/config/defaultSettings'
 import { asyncRouterMap } from '@/config/router.config.js'
@@ -62,12 +59,11 @@ import { asyncRouterMap } from '@/config/router.config.js'
 export default {
   name: 'BasicLayout',
   components: {
-    SettingDrawer,
+    // SettingDrawer,
     RightContent,
-    GlobalFooter,
+    // GlobalFooter,
     Breadcrumb,
     MultiTab,
-    // LogoSvg,
   },
   data() {
     return {
@@ -164,22 +160,6 @@ export default {
     },
     handleCollapse(val) {
       this.collapsed = val
-    },
-    handleSettingChange({ type, value }) {
-      type && (this.settings[type] = value)
-      switch (type) {
-        case 'contentWidth':
-          this.settings[type] = value === 'Fixed'
-          break
-        case 'layout':
-          if (value === 'sidemenu') {
-            this.settings.contentWidth = false
-          } else {
-            this.settings.fixSiderbar = false
-            this.settings.contentWidth = true
-          }
-          break
-      }
     },
   },
 }
