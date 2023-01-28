@@ -1,5 +1,7 @@
 <template>
-  <div>111</div>
+  <div>
+    <a-input />
+  </div>
 </template>
 
 <script>

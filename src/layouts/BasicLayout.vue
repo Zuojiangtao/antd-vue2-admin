@@ -14,10 +14,6 @@
   >
     <!-- 设置-->
     <!-- <setting-drawer :settings="settings" @change="handleSettingChange" /> -->
-    <!-- layout content -->
-    <a-layout-content :style="{ height: '100%' }">
-      <transition name="page-transition"></transition>
-    </a-layout-content>
     <!-- 菜单logo -->
     <template #menuHeaderRender>
       <div>

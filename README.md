@@ -1,6 +1,6 @@
 <h1 align="center">antd-vue2-admin</h1>
 <div align="center">
-一个基于 <a href="https://vuecomponent.github.io/ant-design-vue/docs/vue/introduce-cn/" target="_blank">Ant Design of Vue</a> 和vue2d的中后台应用快速开发工程模板。
+一个基于 <a href="https://vuecomponent.github.io/ant-design-vue/docs/vue/introduce-cn/" target="_blank">Ant Design of Vue</a> 和vue2的中后台应用快速开发工程模板。
 </div>
 
 ## 简介
@@ -13,7 +13,7 @@
 
 ### 1. 多页签及 keepAlive
 
-- 多页签：在 `src/defaultSetting.js` 将 multiTab 改为 true 即可;
+- 多页签：在 `src/config/defaultSetting.js` 将 multiTab 改为 true 即可;
 - 页签缓存：将多次打开的页签及当前激活页面存储在浏览器，刷新页面还原之前的浏览记录；
 - keepAlive: 多页签和 keepAlive 配合使用，将页签打开的页面缓存(开发中)
 
@@ -29,6 +29,7 @@
 ### 4. 公共组件
 
 - 封装面包屑导航组件，相关文件： `components/Breadcrumb`
+- 封装公共 svg 组件，相关文件： `components/SvgIcon`
 
 ### 5. CI\CD
 
@@ -36,10 +37,11 @@
 
 ### 6. 常用组件混入文件
 
-- 新增表单、表格常用逻辑，相关文件： `mixins/formMixins, mixins/tableMixins`
+- 新增表单、表格、图表常用逻辑，相关文件： `mixins/`
 
 ### 7. 其他
 
+- 首页面板 demo，相关文件：`views/dashboard`, `core/echarts`, `assets/iconfont/`, `utils/dataCheck.js`
 - 其他相关功能见 `docs/` 下文档。
 
 ## Project setup

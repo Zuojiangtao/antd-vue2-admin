@@ -10,9 +10,9 @@ import {
   // Switch,
   // Radio,
   // Checkbox,
-  Select,
+  // Select,
   Card,
-  Form,
+  // Form,
   Row,
   Col,
   Modal,
@@ -29,30 +29,33 @@ import {
   // Spin,
   Menu,
   // Drawer,
-  // Tooltip,
+  Tooltip,
   // Tree,
-  Alert,
+  // Alert,
   // Tag,
   Divider,
   // DatePicker,
   // TimePicker,
   // Upload,
-  // Progress,
+  Progress,
   // Skeleton,
   // Popconfirm,
-  Pagination,
-  PageHeader,
-  Result,
+  // Pagination,
+  // PageHeader,
+  // Result,
   // Statistic,
   // Descriptions,
-  // Cascader,
+  Cascader,
   message,
   notification,
   // Space,
   // Transfer,
   // TreeSelect,
-  Empty,
+  // Empty,
 } from 'ant-design-vue'
+
+// ext lib
+import SvgIcon from '@/components/SvgIcon'
 
 Vue.use(ConfigProvider)
 Vue.use(Layout)
@@ -62,9 +65,9 @@ Vue.use(Button)
 // Vue.use(Switch)
 // Vue.use(Radio)
 // Vue.use(Checkbox)
-Vue.use(Select)
+// Vue.use(Select)
 Vue.use(Card)
-Vue.use(Form)
+// Vue.use(Form)
 Vue.use(Row)
 Vue.use(Col)
 Vue.use(Modal)
@@ -81,27 +84,27 @@ Vue.use(Breadcrumb)
 // Vue.use(Spin)
 Vue.use(Menu)
 // Vue.use(Drawer)
-// Vue.use(Tooltip)
+Vue.use(Tooltip)
 // Vue.use(Tree)
-Vue.use(Alert)
+// Vue.use(Alert)
 // Vue.use(Tag)
 Vue.use(Divider)
 // Vue.use(DatePicker)
 // Vue.use(TimePicker)
 // Vue.use(Upload)
-// Vue.use(Progress)
+Vue.use(Progress)
 // Vue.use(Skeleton)
 // Vue.use(Popconfirm)
-Vue.use(Pagination)
-Vue.use(PageHeader)
-Vue.use(Result)
+// Vue.use(Pagination)
+// Vue.use(PageHeader)
+// Vue.use(Result)
 // Vue.use(Statistic)
 // Vue.use(Descriptions)
-// Vue.use(Cascader)
+Vue.use(Cascader)
 // Vue.use(Space)
 // Vue.use(Transfer)
 // Vue.use(TreeSelect)
-Vue.use(Empty)
+// Vue.use(Empty)
 
 Vue.prototype.$confirm = Modal.confirm
 Vue.prototype.$message = message
@@ -110,5 +113,7 @@ Vue.prototype.$info = Modal.info
 Vue.prototype.$success = Modal.success
 Vue.prototype.$error = Modal.error
 Vue.prototype.$warning = Modal.warning
+
+Vue.component('SvgIcon', SvgIcon)
 
 process.env.NODE_ENV !== 'production' && console.warn('[antd-pro] NOTICE: Antd use lazy-load.')
