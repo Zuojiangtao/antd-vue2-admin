@@ -1,1 +1,0 @@
-"use strict";(self["webpackChunkantd_vue2_admin"]=self["webpackChunkantd_vue2_admin"]||[]).push([[964],{81964:function(n,e,u){u.r(e),u.d(e,{default:function(){return i}});var t=function(){var n=this,e=n.$createElement,u=n._self._c||e;return u("div",[n._v("111")])},a=[],l={name:"Index"},r=l,c=u(1001),d=(0,c.Z)(r,t,a,!1,null,null,null),i=d.exports}}]);
