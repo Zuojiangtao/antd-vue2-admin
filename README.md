@@ -1,6 +1,6 @@
 <h1 align="center">antd-vue2-admin</h1>
 <div align="center">
-一个基于 <a href="https://vuecomponent.github.io/ant-design-vue/docs/vue/introduce-cn/" target="_blank">Ant Design of Vue</a> 和vue2的中后台应用快速开发工程模板。
+一个基于 <a href="https://1x.antdv.com/docs/vue/introduce-cn/" target="_blank">Ant Design of Vue</a> 和vue2的中后台应用快速开发工程模板。
 </div>
 
 ## 简介
@@ -20,7 +20,7 @@
 ### 2. 权限管理优化
 
 - 针对权限系统做出补充及优化，增加颗粒度更细的控制及企业级应用的完善，如 403、404 函数判断。相关文件： `src/permission.js`
-- 权限管理
+- 权限管理(开发中)
 
 ### 3. 无感刷新 token
 
