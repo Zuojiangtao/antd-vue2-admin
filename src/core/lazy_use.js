@@ -27,7 +27,7 @@ import {
   Breadcrumb,
   // Steps,
   // Spin,
-  Menu,
+  // Menu,
   // Drawer,
   Tooltip,
   // Tree,
@@ -45,7 +45,7 @@ import {
   // Result,
   // Statistic,
   // Descriptions,
-  Cascader,
+  // Cascader,
   message,
   notification,
   // Space,
@@ -82,7 +82,7 @@ Vue.use(Avatar)
 Vue.use(Breadcrumb)
 // Vue.use(Steps)
 // Vue.use(Spin)
-Vue.use(Menu)
+// Vue.use(Menu)
 // Vue.use(Drawer)
 Vue.use(Tooltip)
 // Vue.use(Tree)
@@ -100,7 +100,7 @@ Vue.use(Progress)
 // Vue.use(Result)
 // Vue.use(Statistic)
 // Vue.use(Descriptions)
-Vue.use(Cascader)
+// Vue.use(Cascader)
 // Vue.use(Space)
 // Vue.use(Transfer)
 // Vue.use(TreeSelect)
