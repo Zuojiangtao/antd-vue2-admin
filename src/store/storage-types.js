@@ -1,6 +1,9 @@
-export const ACCESS_TOKEN = 'Access-Token'
-export const REFRESH_TOKEN = 'Refresh-Token'
-export const USER_ID = 'User_Id'
+export const ACCESS_TOKEN = 'Token' // 设置token
+export const SET_REFRESH_TOKEN = 'SetRefreshToken' // 设置refreshToken
+export const SET_DICTIONARY = 'SetDictionary' // 设置字典
+export const ADD_KEEP_ALIVE_VIEW = 'AddKeepAliveView' // 添加缓存页面
+export const DEL_KEEP_ALIVE_VIEW = 'DelKeepAliveView' // 删除缓存页面
+export const KEEP_ALIVE = 'KeepAlive' // 设置keepAlive
 export const KEEP_ALIVE_TAB = 'KeepAliveTabs' // tabs
 export const KEEP_ALIVE_FULL_PATH = 'KeepAliveFullPath' // fullPath
 export const CURRENT_TAB_ACTIVE_KEY = 'ActiveTabKey' // 当前激活的tab

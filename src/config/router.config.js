@@ -10,11 +10,12 @@ const RouteView = {
 export const asyncRouterMap = [
   {
     path: '/',
-    name: 'index',
+    name: 'BasicLayout',
     component: BasicLayout,
     meta: {
       title: '首页',
       permission: ['dashboard'],
+      keepAlive: true,
     },
     redirect: '/dashboard',
     children: [
@@ -49,6 +50,18 @@ export const asyncRouterMap = [
             meta: { title: 'dashboard3', permission: ['dashboard3'] },
           },
         ],
+      },
+      // demo
+      {
+        path: '/demo',
+        name: 'KeepAliveDemo',
+        component: () => import('@/views/demo/Index'),
+        meta: {
+          title: '组件示例',
+          icon: 'desktop',
+          permission: ['demo'],
+          keepAlive: true,
+        },
       },
       // Exception
       {

@@ -16,7 +16,7 @@ import './assets/iconfont/iconfont'
 import bootstrap from '@/core/bootstrap'
 import '@/core/lazy_use' // use lazy load components
 import '@/core/echarts'
-// import './permission'
+import './permission'
 
 Vue.config.productionTip = false
 

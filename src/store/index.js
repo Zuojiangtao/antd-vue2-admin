@@ -7,6 +7,7 @@ import app from './modules/app'
 // import permission from './modules/permission'
 import user from './modules/user'
 import multiTabs from './modules/multi-tabs'
+import keepAlive from './modules/keepAlive'
 
 import getters from './getters'
 
@@ -20,6 +21,7 @@ export default new Vuex.Store({
     // permission,
     user,
     multiTabs,
+    keepAlive,
   },
   getters,
 })

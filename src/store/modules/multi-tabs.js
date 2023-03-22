@@ -3,7 +3,6 @@ import { KEEP_ALIVE_TAB, KEEP_ALIVE_FULL_PATH, CURRENT_TAB_ACTIVE_KEY } from '..
 
 const multiTabs = {
   state: {
-    keepAlive: ['Index'], // 需要缓存的页面路由 - name
     activeTabList: storage.get(KEEP_ALIVE_TAB) || [], // 所有激活的tab列表 - route
     activeFullPath: storage.get(KEEP_ALIVE_FULL_PATH) || [], // 激活的multiTab路由path列表 - path
     currentTabActiveKey: storage.get(CURRENT_TAB_ACTIVE_KEY) || '', // 当前multiTab激活id - id

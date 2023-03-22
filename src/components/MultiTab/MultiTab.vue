@@ -1,6 +1,9 @@
 <script>
 import events from './events'
 import { mapActions, mapGetters } from 'vuex'
+import store from '@/store'
+import { DEL_KEEP_ALIVE_VIEW } from '@/store/storage-types'
+
 export default {
   name: 'MultiTab',
   data() {
@@ -92,6 +95,9 @@ export default {
       }
       await this.deleteKeepAliveTab(targetKey) // 删除缓存tab
       await this.deleteKeepAliveFullPath(targetKey) // 删除tab路径
+      // 如果开启多页签，在关闭页签时也要把keepAlive删除
+      const { name } = this.pages.find(page => page.fullPath === targetKey)
+      name && store.commit(DEL_KEEP_ALIVE_VIEW, name)
       this.pages = this.pages.filter(page => page.fullPath !== targetKey)
       this.fullPathList = this.fullPathList.filter(path => path !== targetKey)
       // 判断当前标签是否关闭，若关闭则跳转到最后一个还存在的标签页
