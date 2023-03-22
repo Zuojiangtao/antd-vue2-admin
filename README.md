@@ -15,7 +15,7 @@
 
 - 多页签：在 `src/config/defaultSetting.js` 将 multiTab 改为 true 即可;
 - 页签缓存：将多次打开的页签及当前激活页面存储在浏览器，刷新页面还原之前的浏览记录；
-- keepAlive: 多页签和 keepAlive 配合使用，将页签打开的页面缓存(开发中)
+- keepAlive: 多页签和 keepAlive 配合使用，将页签打开的页面缓存
 
 ### 2. 权限管理优化
 
