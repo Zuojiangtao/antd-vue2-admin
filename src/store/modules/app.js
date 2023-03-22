@@ -13,9 +13,6 @@ import {
   TOGGLE_MULTI_TAB,
   // i18n
   APP_LANGUAGE,
-  // keepAlive
-  ADD_KEEP_ALIVE_VIEW,
-  DEL_KEEP_ALIVE_VIEW,
 } from '@/store/mutation-types'
 // import { loadLanguageAsync } from '@/locales'
 
@@ -34,8 +31,6 @@ const app = {
     multiTab: true,
     lang: 'zh_CN',
     _antLocale: {},
-
-    keepAliveViews: [],
   },
   mutations: {
     [SIDEBAR_TYPE]: (state, type) => {
@@ -85,16 +80,6 @@ const app = {
     [TOGGLE_MULTI_TAB]: (state, bool) => {
       storage.set(TOGGLE_MULTI_TAB, bool)
       state.multiTab = bool
-    },
-    // keepAlive
-    [ADD_KEEP_ALIVE_VIEW]: (state, routeNames) => {
-      const isExist = routeNames.every(name => state.keepAliveViews.includes(name))
-      if (isExist) return
-      state.keepAliveViews.push(...routeNames)
-    },
-    [DEL_KEEP_ALIVE_VIEW]: (state, routeName) => {
-      const index = state.keepAliveViews.indexOf(routeName)
-      index > -1 && state.keepAliveViews.splice(index, 1)
     },
   },
   actions: {

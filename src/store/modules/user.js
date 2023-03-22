@@ -1,10 +1,11 @@
 import storage from 'store'
 import { login, getInfo, logout } from '@/api/login'
-import { ACCESS_TOKEN } from '@/store/mutation-types'
+import { ACCESS_TOKEN } from '@/store/storage-types'
 
 const user = {
   state: {
-    token: '',
+    token: storage.get(ACCESS_TOKEN) || '',
+    userId: storage.get('userId') || '',
     name: 'userName',
     avatar: 'https://gw.alipayobjects.com/zos/antfincdn/XAosXuNZyF/BiazfanxmamNRoxxVxka.png',
     roles: [],

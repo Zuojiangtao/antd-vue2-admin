@@ -1,5 +1,5 @@
 import { getProductClassifyList, editProductClassify } from '@/api/product/product'
-import { SET_CLASSIFY } from '../mutation-types'
+import { SET_DICTIONARY } from '../storage-types'
 
 const CLASSFIY_API = {
   // 产品
@@ -19,7 +19,7 @@ const classify = {
      * @param {String} module 属于哪个模块的分类
      * @param {Array} data 分类数据
      */
-    [SET_CLASSIFY]: (state, { module, data }) => {
+    [SET_DICTIONARY]: (state, { module, data }) => {
       state[`${module}ClassifyList`] = data
     },
   },
@@ -30,7 +30,7 @@ const classify = {
         getClassifyList(params)
           .then(({ data }) => {
             const list = data.list || []
-            commit(SET_CLASSIFY, { module, data: list })
+            commit(SET_DICTIONARY, { module, data: list })
             resolve(list)
           })
           .catch(err => {
@@ -44,7 +44,7 @@ const classify = {
         setClassify(data)
           .then(({ data }) => {
             const list = data.list || []
-            commit(SET_CLASSIFY, { module, data: list })
+            commit(SET_DICTIONARY, { module, data: list })
             resolve(list)
           })
           .catch(err => {

@@ -1,5 +1,5 @@
 import storage from 'store'
-import { SET_DICTIONARY } from '../mutation-types'
+import { SET_DICTIONARY } from '../storage-types'
 import { getDictionaryList } from '@/api/system/dictionary'
 
 const dictionary = {
