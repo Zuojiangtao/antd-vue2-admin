@@ -4,7 +4,7 @@ import { ACCESS_TOKEN } from '@/store/storage-types'
 
 const user = {
   state: {
-    token: storage.get(ACCESS_TOKEN) || '',
+    token: storage.get(ACCESS_TOKEN) || 'ACCESS_TOKEN',
     userId: storage.get('userId') || '',
     name: 'userName',
     avatar: 'https://gw.alipayobjects.com/zos/antfincdn/XAosXuNZyF/BiazfanxmamNRoxxVxka.png',
