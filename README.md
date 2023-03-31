@@ -7,7 +7,14 @@
 
 本项目基于[ant-design-vue-pro](https://github.com/vueComponent/ant-design-vue-pro)，删减了冗余代码和多余插件，增加一些常用功能及函数。对 vue2 及 ant-design-vue 熟悉的前端开发者可使用本模板快速进行中后台应用的开发。
 
-> 本项目基于vue@2.6.14及ant-design-vue@1.7.8版本。
+## 环境及依赖
+
+- node: 14
+- yarn
+- webpack: 5
+- eslint
+- prettier
+- @vue/cli
 
 ## 新增功能及优化
 
@@ -42,6 +49,7 @@
 ### 7. 其他
 
 - 首页面板 demo，相关文件：`views/dashboard`, `core/echarts`, `assets/iconfont/`, `utils/dataCheck.js`
+- Git hooks：husky、@commitlint/cli、@commitlint/config-conventional、pretty-quick,相关文件: `commitlint.config.js`, `.husky/`
 - 其他相关功能见 `docs/` 下文档。
 
 ## Project setup
