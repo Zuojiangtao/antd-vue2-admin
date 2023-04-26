@@ -7,6 +7,8 @@
 
 本项目基于[ant-design-vue-pro](https://github.com/vueComponent/ant-design-vue-pro)，删减了冗余代码和多余插件，增加一些常用功能及函数。对 vue2 及 ant-design-vue 熟悉的前端开发者可使用本模板快速进行中后台应用的开发。
 
+**vue3 版本**开发规划中：一个基于 vue3，vite4 和 ant-design-vue4 的中后台开发模板——[antd-vue3-admin](https://github.com/Zuojiangtao/antd-vue3-admin)。
+
 ## 环境及依赖
 
 - node: 14
