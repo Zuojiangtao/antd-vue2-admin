@@ -27,7 +27,7 @@ import {
   Breadcrumb,
   // Steps,
   // Spin,
-  // Menu,
+  Menu,
   // Drawer,
   Tooltip,
   // Tree,
@@ -82,7 +82,7 @@ Vue.use(Avatar)
 Vue.use(Breadcrumb)
 // Vue.use(Steps)
 // Vue.use(Spin)
-// Vue.use(Menu)
+Vue.use(Menu)
 // Vue.use(Drawer)
 Vue.use(Tooltip)
 // Vue.use(Tree)
