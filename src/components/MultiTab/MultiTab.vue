@@ -109,6 +109,12 @@ export default {
       this.activeKey = this.fullPathList[this.fullPathList.length - 1]
     },
     // content menu
+    fullscreen(e) {
+      const elm = document.getElementById('contentWrapperRef')
+      if (elm) {
+        elm.requestFullscreen()
+      }
+    },
     closeThat(e) {
       // 判断是否为最后一个标签页，如果是最后一个，则无法被关闭
       if (this.fullPathList.length > 1) {
@@ -149,10 +155,20 @@ export default {
         }
       })
     },
+    closeOther(e) {
+      const currentIndex = this.fullPathList.indexOf(e)
+      this.fullPathList.forEach((item, index) => {
+        if (index !== currentIndex) {
+          this.remove(item)
+        }
+      })
+    },
     closeMenuClick(key, route) {
       this[key](route)
     },
     renderTabPaneMenu(e) {
+      const currentIndex = this.fullPathList.indexOf(e)
+      const fullPathLength = this.fullPathList.length
       return (
         <a-menu
           {...{
@@ -163,18 +179,38 @@ export default {
             },
           }}
         >
-          <a-menu-item key="closeThat">关闭当前标签</a-menu-item>
-          <a-menu-item key="closeRight">关闭右侧</a-menu-item>
-          <a-menu-item key="closeLeft">关闭左侧</a-menu-item>
-          <a-menu-item key="closeAll">关闭全部</a-menu-item>
+          <a-menu-item key="fullscreen">
+            <a-icon type="fullscreen" />
+            内容全屏
+          </a-menu-item>
+          <a-menu-item key="closeThat">
+            <a-icon type="minus" />
+            关闭当前
+          </a-menu-item>
+          <a-menu-item key="closeOther" disabled={fullPathLength === 1}>
+            <a-icon type="swap" />
+            关闭其他
+          </a-menu-item>
+          <a-menu-item key="closeRight" disabled={currentIndex === fullPathLength - 1}>
+            <a-icon type="double-right" />
+            关闭右侧
+          </a-menu-item>
+          <a-menu-item key="closeLeft" disabled={currentIndex === 0}>
+            <a-icon type="double-left" />
+            关闭左侧
+          </a-menu-item>
+          <a-menu-item key="closeAll" disabled={fullPathLength === 1}>
+            <a-icon type="close" />
+            关闭全部
+          </a-menu-item>
         </a-menu>
       )
     },
     // render
-    renderTabPane(title, keyPath) {
+    renderTabPane(title, keyPath, trigger = ['hover']) {
       const menu = this.renderTabPaneMenu(keyPath)
       return (
-        <a-dropdown overlay={menu} trigger={['contextmenu']}>
+        <a-dropdown overlay={menu} trigger={trigger}>
           <span style={{ userSelect: 'none' }}>{title}</span>
         </a-dropdown>
       )
@@ -201,12 +237,18 @@ export default {
       return (
         <a-tab-pane
           style={{ height: 0 }}
-          tab={this.renderTabPane(page.meta.customTitle || page.meta.title, page.fullPath)}
+          tab={this.renderTabPane(page.meta.customTitle || page.meta.title, page.fullPath, ['contextmenu'])}
           key={page.fullPath}
           closable={pages.length > 1 && page.name !== 'Index'}
         ></a-tab-pane>
       )
     })
+    const rightMenuDropdownProps = {
+      props: {
+        getPopupContainer: triggerNode => triggerNode.parentNode,
+        overlay: this.renderTabPaneMenu(this.$route.fullPath),
+      },
+    }
     return (
       <div class="ant-pro-multi-tab">
         <div class="ant-pro-multi-tab-wrapper">
@@ -219,6 +261,11 @@ export default {
           >
             {panes}
           </a-tabs>
+          <a-dropdown {...rightMenuDropdownProps}>
+            <a-button>
+              <a-icon type="down" style={{ fontSize: '18px' }} />
+            </a-button>
+          </a-dropdown>
         </div>
       </div>
     )

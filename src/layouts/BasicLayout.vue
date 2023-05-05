@@ -28,15 +28,17 @@
     <!-- 页面头-->
     <template #rightContentRender>
       <right-content :top-menu="settings.layout === 'topmenu'" :is-mobile="isMobile" :theme="settings.theme" />
-      <multi-tab v-if="multiTab"></multi-tab>
     </template>
     <!-- 页面脚-->
     <!--    <template #footerRender>-->
     <!--      <global-footer style="display: none" />-->
     <!--    </template>-->
-    <keep-alive :include="keepAlive">
-      <router-view :key="$route.fullPath" :style="{ paddingTop: multiTab ? '40px' : '0' }" />
-    </keep-alive>
+    <multi-tab v-if="multiTab"></multi-tab>
+    <div class="content-wrapper" id="contentWrapperRef" style="background-color: #f0f1f3; overflow-y: scroll">
+      <keep-alive :include="keepAlive">
+        <router-view :key="$route.fullPath" :style="{ padding: '12px', height: 'calc(100vh - 110px)' }" />
+      </keep-alive>
+    </div>
   </pro-layout>
 </template>
 
