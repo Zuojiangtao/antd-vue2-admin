@@ -1,4 +1,4 @@
-<h1 align="center">antd-vue2-admin</h1>
+<h1 align="center">Antd-Vue2-Admin</h1>
 <div align="center">
 一个基于 <a href="https://1x.antdv.com/docs/vue/introduce-cn/" target="_blank">Ant Design of Vue</a> 和vue2的中后台应用快速开发工程模板。
 </div>

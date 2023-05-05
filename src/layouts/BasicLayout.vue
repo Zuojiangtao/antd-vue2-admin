@@ -4,7 +4,7 @@
     :collapsed="collapsed"
     :mediaQuery="query"
     :isMobile="isMobile"
-    :siderWidth="200"
+    :siderWidth="240"
     :collapsedWidth="60"
     :contentWidth="defaultSettings.contentWidth"
     :footerRender="false"
